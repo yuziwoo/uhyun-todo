@@ -13,6 +13,4 @@ function App() {
   );
 }
 
-// "homepage": "https://yuziwoo.github.io/uhyun-todo/build"
-
 export default App;
