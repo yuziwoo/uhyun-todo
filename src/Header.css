@@ -4,19 +4,7 @@ header {
   justify-content: center;
   align-items: center;
   position: sticky;
-  opacity: 0;
-  animation: header 0.8s 0.15s 1 forwards;
-}
-
-@keyframes header {
-  from {
-    opacity: 0;
-
-  }
-  to {
-    opacity: 1;
-
-  }
+  opacity: 1;
 }
 
 header .timer {
@@ -38,13 +26,13 @@ header .logo {
   font-weight: 600;
   font-size: 3.2rem;
   cursor: default;
-  transition: all 0.5s;
 }
 
 header .logo2 {
   opacity: 0;
   left: 30%;
   color: #3D3D43;
+  transition: all 0.5s;
   transform: translateX(-3%);
 }
 
