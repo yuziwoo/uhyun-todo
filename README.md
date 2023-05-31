@@ -8,8 +8,9 @@
 
 ### :technologist: 페이지 기획
 ---
-- **서버 API** : GET, GETLIST, CREATE, UPDATE, DELETE
+- **클라이언트 언어** : React
 - **클라이언트 기능** : 할 일 추가, 수정, 삭제, 일괄 삭제 및 기타 모션 이펙트
+- **서버 API** : GET, GETLIST, CREATE, UPDATE, DELETE
 
 <br>
 
