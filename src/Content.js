@@ -30,7 +30,6 @@ function Header() {
         document.getElementsByClassName("delete-button")[0].classList.add("delete-on");
       }
     } else {
-      console.log("zz")
       document.getElementsByClassName("delete-button")[0].classList.remove("delete-on");
     }
     
