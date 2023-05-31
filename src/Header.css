@@ -1,0 +1,54 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  opacity: 0;
+  animation: header 0.8s 0.15s 1 forwards;
+}
+
+@keyframes header {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+}
+
+header .timer {
+  position: absolute;
+  right: 3.7%;
+  text-align: right;
+  color: #62626B;
+  font-weight: 600;
+  font-size: 2.4rem;
+  letter-spacing: 0.005em;
+  cursor: default;
+}
+
+header .logo {
+  position: absolute;
+  left: 11%;
+  text-align: left;
+  color: #62626B;
+  font-weight: 600;
+  font-size: 3.2rem;
+  cursor: default;
+  transition: all 0.5s;
+}
+
+header .logo2 {
+  opacity: 0;
+  left: 30%;
+  color: #3D3D43;
+  transform: translateX(-3%);
+}
+
+header:hover .logo2 {
+  opacity: 1;
+  transform: translateX(0%);
+}

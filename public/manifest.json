@@ -1,0 +1,8 @@
+{
+  "short_name": "TODO-LIST",
+  "name": "UHYUN PROJECT : TODO-LIST",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

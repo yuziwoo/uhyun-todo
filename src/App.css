@@ -1,0 +1,16 @@
+body {
+  background-color: #F0F0F5;
+}
+
+.App {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  position: relative;
+  background-color: #101012;
+  /* background-image: url("../public/bg.jpg");
+  background-size: 100% auto;
+  background-position: center center; */
+  min-height: 100vh;
+  overflow: hidden;
+}
