@@ -167,37 +167,41 @@ function Header() {
           e.stopPropagation();
           if (e.key == "Enter") {
             if(act == "update") {
-              e.currentTarget.parentElement.parentElement.classList.remove("editer-on");
-              axios.put(`http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/update/${activeID}`, {contents: document.getElementsByClassName("edit-input")[0].value})
-              .then((r) => {
-                axios.get('http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/list')
-                  .then((res) => {
-                    let arr = [...res.data.contents];
-                    setList(arr);
-                  })
-                  .catch((e) => {
-                    console.log(e);
-                  })
-              })
-              .catch((e) => {
-                console.log(e);
-              })
+              if (e.currentTarget.parentElement.parentElement.classList.contains("editer-on")) {
+                e.currentTarget.parentElement.parentElement.classList.remove("editer-on");
+                axios.put(`http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/update/${activeID}`, {contents: document.getElementsByClassName("edit-input")[0].value})
+                .then((r) => {
+                  axios.get('http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/list')
+                    .then((res) => {
+                      let arr = [...res.data.contents];
+                      setList(arr);
+                    })
+                    .catch((e) => {
+                      console.log(e);
+                    })
+                })
+                .catch((e) => {
+                  console.log(e);
+                })
+              }
             } else if (act == "create") {
+              if (e.currentTarget.parentElement.parentElement.classList.contains("editer-on")) {
+                axios.post(`http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/create`, {contents: document.getElementsByClassName("edit-input")[0].value})
+                .then((r) => {
+                  axios.get('http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/list')
+                    .then((res) => {
+                      let arr = [...res.data.contents];
+                      setList(arr);
+                    })
+                    .catch((e) => {
+                      console.log(e);
+                    })
+                })
+                .catch((e) => {
+                  console.log(e);
+                })
+              }
               e.currentTarget.parentElement.parentElement.classList.remove("editer-on");
-              axios.post(`http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/create`, {contents: document.getElementsByClassName("edit-input")[0].value})
-              .then((r) => {
-                axios.get('http://yhtodo-env.eba-etyrmp7y.ap-northeast-2.elasticbeanstalk.com/api/todos/list')
-                  .then((res) => {
-                    let arr = [...res.data.contents];
-                    setList(arr);
-                  })
-                  .catch((e) => {
-                    console.log(e);
-                  })
-              })
-              .catch((e) => {
-                console.log(e);
-              })
             }
           }
         }}></input>
