@@ -24,7 +24,6 @@ function Header() {
   }, [])
 
   useEffect(() => {
-    console.log(doneList);
     if (doneList.length >= 1) {
       if (!document.getElementsByClassName("delete-button")[0].classList.contains("delete-on")) {
         document.getElementsByClassName("delete-button")[0].classList.add("delete-on");
